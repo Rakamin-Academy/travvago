@@ -2,7 +2,6 @@
   <div>
     <Navbar/>
     <Home/>
-    <Explore/>
   </div>
 </template>
 
