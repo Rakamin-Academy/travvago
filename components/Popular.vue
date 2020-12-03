@@ -1,9 +1,8 @@
 <template>
-  <div class="container-destination">
-    <div class="header">
-      <h1 class="animate__animated animate__lightSpeedInLeft" >Destination</h1>
-        </div>
+  <div class="container-popular">
+        <h1 class="header">Popular  Destination</h1>
           <b-card-group class="card-group" deck>
+
               <b-col cols="3" lg="3" md="6" sm="12">
                 <b-card
                   title="Card Title"
@@ -20,7 +19,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -41,7 +40,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -62,7 +61,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -83,7 +82,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -104,7 +103,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -125,7 +124,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -146,7 +145,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
                 </b-card>
               </b-col>
@@ -167,7 +166,7 @@
                   <div class="overlay">
                       <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
                         <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
+                  <b-button class="explore" href="/explore" >Pelajari Selengkapnya</b-button>
                   </div>
               </b-card>
             </b-col>
@@ -178,19 +177,20 @@
 <script>
 export default {
   
-}
+  }
 </script>
 
 <style scooped>
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-.container-destination {
-  background: #FAFAFA;
+.container-popular {
+
+  background: linear-gradient(294.89deg, #FEA858 0.54%, #6CC6CB 99.34%);
   margin-top: 100px;
   width: 100%;
   height: 100%;
 }
-.header h1 {
+.header {
   display: flex;
   font-family: 'Satisfy', cursive;
   margin-bottom: 50px;
@@ -198,19 +198,21 @@ export default {
   justify-content: center;
   font-weight: bold;
   font-size: 48px;
-  padding: 40px 0 10px 0;
+  padding: 40px 0 30px 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
 }
 .card-group {
+  margin-left: 2px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
 }
 .explore {
+
   color: white;
   border: 1px solid grey;
   background: linear-gradient(180deg, #FEA858 0%, #F85E1D 100%);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
-  margin-left: 200px;
-  margin-top: 280px;
+  margin-left: 175px;
+  margin-top: 300px;
 }
 .explore:hover{
   background: white;
@@ -248,7 +250,7 @@ export default {
 .text {
   white-space: nowrap; 
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -266,21 +268,9 @@ export default {
   background: linear-gradient(180deg, #FEA858 0%, #F85E1D 100%);
 }
 
-
-/* tablet version */
-@media (min-width: 768px) {
-.explore {
-  margin-left: 170px;
-  margin-top: 270px;
-}
-.card-group {
-  margin-right: 15px;
-}
-}
-
 /* Desktop Version */
 @media (min-width: 992px) {
-.container-destination {
+.container-popular {
   margin-top: 100px;
   margin-left: 250px;
   width: 1440px;
@@ -288,14 +278,14 @@ export default {
   margin-top: -10px;
 }
 .header h1 {
-  margin-bottom: 110px;
+  margin-bottom: 50px;
   justify-content: center;
   font-size: 64px;
   padding: 50px 0 10px 0;
 }
 .card-group {
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 50px;
 }
 .home{
   margin-top: -350px;
@@ -304,8 +294,8 @@ export default {
   font-size: 20px;
 }
 .explore {
-  margin-left: 90px;
-  margin-top: 250px;
+  margin-left: 60px;
+  margin-top: 225px;
 }
 }
 </style>

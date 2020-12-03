@@ -2,7 +2,9 @@
   <div>
     <Navbar/>
     <Home/>
-    <nuxt />
+    <Destination/>
+    <Popular/>
+
   </div>
 </template>
 

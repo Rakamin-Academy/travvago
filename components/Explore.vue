@@ -1,53 +1,37 @@
 <template>
-  <div class="container">
-  <b-card no-body class="overflow-hidden" style="max-width: 1440px;">
-    <b-row no-gutters>
-      <b-col md="6">
-        <b-card-img src="../assets/bromo.jpg" alt="Image" class="rounded-0" style="max-width: 100%;" height="515px"></b-card-img>
-      </b-col>
-      <b-col md="6">
-        <b-card-body title="About" >
-          <b-card-text>
-            <div class="accordion" role="tablist">
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-1 variant="info">Information</b-button>
-                </b-card-header>
-                <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <b-card-text>{{ text }}</b-card-text>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
+  <div>
+      <b-nav class="back">
+        <b-nav-item href="/" active>Home /</b-nav-item>
+        <b-nav-item href="destination">Destination /</b-nav-item>
+        <b-nav-item disabled>Explore</b-nav-item>
+      </b-nav>
+      <div class="container">
+      <b-tabs content-class="mt-3" justified text-danger>
 
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-2 variant="info">Lokasi</b-button>
-                </b-card-header>
-                <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <b-card-text>{{ lokasi }}</b-card-text>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
+        <!-- first tab start-->
+        <b-tab title="Details" active>
+          <img class="image" src="../assets/bromo.jpg">
+          </b-tab>
+        <!-- first tab end -->
 
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-3 variant="info">Information</b-button>
-                </b-card-header>
-                <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <b-card-text class="info-covid">{{ info }}</b-card-text>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
-            </div>
-          </b-card-text>
-        </b-card-body>
-      </b-col>
-    </b-row>
-  </b-card>
-</div>
+        <!-- Second tab start -->
+        <b-tab title="About">
+          <p>{{ text }}</p>
+          <p>{{ lokasi }}</p>
+        </b-tab>
+        <!-- second tab end -->
+
+        <!-- third tab start -->
+        <b-tab title="Travel Tips & Information">
+          <img class="image-info" src="../assets/pkw.jpg">
+          <p class="info">{{ info }}</p>
+
+          </b-tab>
+        <!-- third tab end -->
+        
+      </b-tabs>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -62,18 +46,10 @@ export default {
         Yang unik dari letak dan lokasi Gunung Bromo adalah, terdapat di perbatasan 4 kabupaten di Jawa Timur. Yaitu, kabupaten Malang, kabupaten Pasuruan, kabupaten Probolinggo, dan terakhir adalah kabupaten Lumajang. Namun, jalur terbaik bagi wisatawan yang berasal dari luar kota adalah melalui rute Kabupaten Probolinggo, selain akasesnya mudah dekat dengan Terminal Bayu ANgga Probolinggo dan Stasiun Kereta Api Probolinggo.`,
         info:`
         Termasuk zona orange covid`,
-        protokol:`Tetap waspada dan tidak panik.
-
-2. Hindari keramaian baik itu tempat tertutup maupun tempat terbuka.
-
-3. Gunakan masker di mana saja dan kapan saja bahkan dalam ruangan.
-
-4. Ciptakan ruangan dengan ventilasi yang baik seperti, membuka jendela sesering mungkin.
-
-5. Tetap jaga kebersihan tangan serta hindari menyentuh bagian wajah sebelum mencuci tangan.
-
-6. Selalu terapkan jaga jarak pada aktivitas sehari-hari.
-`
+        
+        infeksi: `terinfeksi : 62313`,
+        sembuh : `sembuh : 54863`,
+        meninggal : `meninggal : 4438`,
       }
     }
 }
@@ -81,7 +57,9 @@ export default {
 
 <style scooped>
 .container {
-  background: linear-gradient(127.37deg, #6CC6CB 19.14%, #FEA858 87.36%);
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 782px;
   margin-top: 100px;
   padding: 30px 30px 30px 30px;
 }
@@ -89,6 +67,53 @@ export default {
   text-align: center;
   background-color: orange;
   font-weight: bold;
+}
+.image {
+  margin-left: 35px;
+  margin-bottom: 30px;
+  width: 1000px;
+  height: 500px;
+}
+.image-info {
+  float: left;
+  margin-left: 10px;
+  width: 500px;
+  height: 650px;
+}
+.info{
+  float: right;
+  margin-right: 80px;
+  font-size: 30px;
+}
+.list{
+  float: right;
+  margin-right: 150px;
+}
+.back{
+  color: #F85E1D;
+  background-color: white;
+  position: absolute;
+  width: 500px;
+  margin-left: 400px;
+  margin-top: -40px;
+}
+.back:hover {
+  background-color: none;
+}
 
+/* tablet version */
+@media (min-width: 768px) {
+  .image {
+  width: 90%;
+  height: 90%;
+}
+.image-info {
+  width: 60%px;
+  height: 10%px;
+}
+.back{
+  margin-left: 550px;
+  margin-top: -40px;
+}
 }
 </style>

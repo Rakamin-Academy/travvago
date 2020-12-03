@@ -1,7 +1,7 @@
 <template>
   <div class="container-destination">
     <div class="header">
-      <h1 class="animate__animated animate__lightSpeedInLeft" >Destination</h1>
+      <h1 class="animate__animated animate__heartBeat">Galery</h1>
         </div>
           <b-card-group class="card-group" deck>
               <b-col cols="3" lg="3" md="6" sm="12">
@@ -11,7 +11,22 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
+                >
+                  <b-card-text class="description">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </b-card-text>
+                </b-card>
+              </b-col>
+
+              <b-col cols="3" lg="3" md="6" sm="12">
+                <b-card
+                  title="Card Title"
+                  img-src="../assets/bromo.jpg"
+                  img-alt="Image"
+                  img-top
+                  tag="article"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -32,7 +47,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -53,7 +68,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -74,7 +89,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -95,7 +110,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -116,7 +131,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -137,28 +152,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  class="container mb-3"
-                >
-                  <b-card-text class="description">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </b-card-text>
-                  
-                  <div class="overlay">
-                      <div class="text"> Termasuk dalam <br>zona <span>Orange</span> covid-19
-                        <p>Patuhilah protokol kesehatan</p></div>
-                  <b-button class="explore" href="/explore" >Explore Now</b-button>
-                  </div>
-                </b-card>
-              </b-col>
-
-              <b-col cols="3" lg="3" md="6" sm="12">
-                <b-card
-                  title="Card Title"
-                  img-src="../assets/bromo.jpg"
-                  img-alt="Image"
-                  img-top
-                  tag="article"
-                  class="container mb-3"
+                  class="mb-3"
                 >
                   <b-card-text class="description">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -176,12 +170,12 @@
 </template>
 
 <script>
-export default {
-  
-}
+  export default {
+    
+  }
 </script>
 
-<style scooped>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 .container-destination {
@@ -308,4 +302,5 @@ export default {
   margin-top: 250px;
 }
 }
+</style>
 </style>

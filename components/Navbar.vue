@@ -1,26 +1,29 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <img src="../assets/logo.png" width="50px" height="50px">
-            <a class="navbar-brand" href="#">TravvaGo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                    <nuxt-link to="/home" class="nav-link active">Home |<span class="sr-only">(current)</span></nuxt-link>
-                    <nuxt-link to="/destination" class="nav-link" >Destination |</nuxt-link>
-                    <a class="nav-link" href="#">Galery |</a>
-                    <nuxt-link class="btn" to="/login"><svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <div>
+    <b-navbar toggleable="lg" type="light">
+        <div class="container navbar">
+            <b-img src="../assets/logo.png" width="50px"></b-img>
+            <b-navbar-brand class="nav-brand" href="#">TravvaGo</b-navbar-brand>
+
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav class="navbar-link ml-auto">
+                <b-nav-item href="/">Home |</b-nav-item>
+                <b-nav-item href="/destination">Destination |</b-nav-item>
+                <b-nav-item href="#">Galery |</b-nav-item>
+            </b-navbar-nav>
+                <b-button class="btn btn-login" href="/login"><svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                     <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                     <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-                    </svg> Login </nuxt-link>
-                    <nuxt-link class="btn button" to="/login">Sign Up</nuxt-link>
-                    </div>
-                </div>
+                    </svg> Login </b-button>
+                    <b-button class="btn btn-signup" href="/login">Sign up</b-button>
+                    
+            </b-collapse>
         </div>
-    </nav>
+    </b-navbar>
+    </div>
 </template>
 
 <script>
@@ -29,9 +32,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat&display=swap');
 
+.navbar {
+    position: relative;
+    z-index: 1;
+}
 .navbar-brand {
     font-family: 'Irish Grover', cursive;
     font-size: 26px;
@@ -40,13 +47,31 @@ export default {
     text-transform: uppercase;
     margin-right: 20px;
 }
-.button {
-    background: linear-gradient(255.51deg, #FEA858 30.34%, #ED765C 63.07%);
+.navbar-brand, .nav-link, .btn-login{
+    color: #F85E1D !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+}
+.btn-login{
+    margin-left: 0px;
+    background: none;
+    border: none;
+
+}
+.btn-signup {
+    background: linear-gradient(180deg, #FEA858 0%, #F85E1D 100%);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .btn:active {
     position: relative;
     top: 7px;
     box-shadow: none;
+}
+
+/* tablet version */
+@media (min-width: 768px) {
+.btn-login{
+    margin-left: -10px;
+}
 }
 
 /* Desktop Version */
@@ -61,7 +86,7 @@ export default {
     padding-bottom: 5px;
     margin-bottom: -8px;
 }
-.navbar-brand, .nav-link{
+.navbar-brand, .nav-link, .btn-login{
     color: white !important;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
 }

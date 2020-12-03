@@ -37,7 +37,7 @@
           <nuxt-link to=""
           class="link"> Forgot Password?
           </nuxt-link>
-          <b-button type="login" class="button">Login</b-button>
+          <b-button type="login" class="button-login">Login</b-button>
           </b-btn-group>
           <br>
           <nuxt-link to="/">
@@ -122,7 +122,6 @@ export default {
   margin-top: 200px;
   /* border: 1px solid #A2A2A2; */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
-  padding: 30px;
 }
 h6 {
   text-align: center;
@@ -131,13 +130,14 @@ h6 {
 span {
   font-weight: 700;
 }
-.button {
+.button-login {
   background: linear-gradient(255.51deg, #FEA858 30.34%, #ED765C 63.07%);
   width: 150px;
 }
 .link {
   color: grey;
-  margin-right: 120px;
+  width: 50px;
+  margin-right: 220px
 }
 #input-group-1, #input-group-2{
   color: grey;
@@ -148,18 +148,38 @@ span {
 .button-signup {
   background: linear-gradient(255.51deg, #FEA858 30.34%, #ED765C 63.07%);
   width: 150px;
-  margin-left: 125px;
+  margin-left: 140px;
 }
 .title {
   color: #F85E1D;
 }
 
+@media (min-width: 768px) {
+.link {
+  margin-right: 100px
+}
+.button-signup {
+  margin-left: 60px;
+}
+}
+
+/* tablet version */
 @media (min-width: 992px) {
 .link {
-  margin-right: 200px;
+  margin-right: 310px;
 }
 .button-signup {
   margin-left: 320px;
+}
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+.button-signup {
+  margin-left: 225px;
+}
+.link {
+  margin-right: 390px;
 }
 }
 </style>>

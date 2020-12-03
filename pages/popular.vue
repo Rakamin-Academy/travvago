@@ -1,16 +1,15 @@
 <template>
   <div>
-    <Breadcrumb/>
-    <Destination/>
+    <Popular/>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+    
+  }
 </script>
 
-<style>
+<style scoped>
 
 </style>
