@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <div class="copyright">
-      <h3></h3>
-    </div>
-    <div class="link-group">
-      <b-list-group horizontal>
-        <b-list-group-item>Home</b-list-group-item>
-        <b-list-group-item>Destination</b-list-group-item>
-        <b-list-group-item>Galery</b-list-group-item>
-      </b-list-group>
-    </div>
-  </div>
+  <footer class="mt-5 mb-5">
+      <hr />
+      <div class="container">
+          <div class="row">
+              <div class="col text-center">
+                  2021 Copyright Travvago team.
+              </div>
+          </div>
+      </div>
+  </footer>
 </template>
 
 <script>
