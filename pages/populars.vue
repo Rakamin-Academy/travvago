@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="head">
+      <Navbar />
+    </div>
     <h1 class="header">Populars Galery</h1>
     <div class="row mb-4">
       <div
@@ -9,7 +12,6 @@
       >
         <b-card-group class="card">
           <b-card
-            :title="destination.name"
             :img-src="destination.image"
             :img-alt="destination.name"
             img-top
@@ -17,10 +19,19 @@
             img-height="400px"
             class="text-galery"
           >
+            <div>
+              <b-form-rating
+                id="rating-inline"
+                variant="warning"
+                inline
+                :value="destination.ratings"
+              ></b-form-rating>
+            </div>
+
             <b-card-text>
+              {{ destination.name }} <br>
               {{ destination.address }}
             </b-card-text>
-
           </b-card>
         </b-card-group>
       </div>
@@ -46,14 +57,14 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
 
-* {
-  background-color: #e2e2e2;
+.head {
+  background-color: #85929e;
 }
 .header {
   display: flex;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin-bottom: -20px;
   color: #f85e1d;
   justify-content: center;
@@ -63,8 +74,7 @@ export default {
 }
 .text-galery {
   text-transform: uppercase;
-  font-size:20px;
-
+  font-size: 20px;
 }
 .card {
   min-height: 100%;

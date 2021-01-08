@@ -12,6 +12,7 @@
                 <b-nav-item href="/">Home |</b-nav-item>
                 <b-nav-item href="/destination">Destination |</b-nav-item>
                 <b-nav-item href="/covid19">Info Covid-19 |</b-nav-item>
+                <b-nav-item href="/populars">Populars |</b-nav-item>
             </b-navbar-nav>
 
             </b-collapse>

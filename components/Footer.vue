@@ -3,7 +3,7 @@
       <hr />
       <div class="container">
           <div class="row">
-              <div class="col text-center">
+              <div class="col text-center" style="color:#f85e1d;">
                   2021 Copyright Travvago team.
               </div>
           </div>
