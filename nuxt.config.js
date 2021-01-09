@@ -13,11 +13,14 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
+  css: ['vue-slick-carousel/dist/vue-slick-carousel.css',
+  "@/node_modules/animate.css",
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
+  plugins: [{ src: './plugins/vue-slick-carousel.js' },
+  { src: "~/plugins/vue2-google-maps.js", ssr: true },
+  
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -31,16 +34,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
   ],
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  bootstrapVue: {
+    icons: true
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+    vendor:["vue2-google-maps"]
+  },
+
+  
 }
